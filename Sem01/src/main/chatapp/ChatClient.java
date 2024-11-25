@@ -1,4 +1,4 @@
-package com.example.chatapp;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -114,7 +114,8 @@ public class ChatClient extends JFrame {
             try {
                 String message;
                 while ((message = reader.readLine()) != null) {
-                    SwingUtilities.invokeLater(() -> appendToChatHistory(message));
+                    final String finalMessage = message; // Создаем финальную ссылку
+                    SwingUtilities.invokeLater(() -> appendToChatHistory(finalMessage));
                 }
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(ChatClient.this, "Соединение прервано");
@@ -123,4 +124,5 @@ public class ChatClient extends JFrame {
             }
         }
     }
+    
 }
