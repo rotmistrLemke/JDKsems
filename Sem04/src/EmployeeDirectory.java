@@ -2,8 +2,6 @@ package Sem04.src;
 
 import java.util.*;
 
-import Sem04.Employee;
-
 public class EmployeeDirectory {
     private Map<String, Employee> employees;
     Scanner scanner;

@@ -1,4 +1,4 @@
-package Sem04;
+package Sem04.src;
 
 public class Employee {
     private String tabNumber;
